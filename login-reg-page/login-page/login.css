@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  max-width: 1218px;
+  margin: 32px auto;
+}
+:root {
+  --primary-color: rgba(75, 107, 251, 1);
+  --secondary-color: rgba(75, 107, 251, 0.05);
+  --primary-font-color: rgba(59, 60, 74, 1);
+  --secondary-font-color: rgba(24, 26, 42, 1);
+}
+
+/* Back Button */
+.back-button {
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-font-color);
+  border-radius: 12px;
+}
+.back-button > a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Login Form */
+.login-form {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #444;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #4a90e2;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #4a90e2;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #357ab7;
+}
+
+.have-account {
+  display: block;
+  margin: 10px;
+}
