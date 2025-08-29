@@ -15,13 +15,21 @@
   </head>
   <body>
     <section class="navBar">
-      <div class="logo"><img src="logo/logo-blog.jpg" alt="" srcset="" /></div>
-      <div class="menu">
-        <a href="#">Home</a>
-        <a href="#">Blogs</a>
-        <a href="#">Category</a>
-        <a href="#">Contact</a>
+      <div class="mobile-menu-icon">
+        <img src="./icons/menu.png" alt="" />
       </div>
+      <div class="web-logo">
+        <a href="./home.html"
+          ><img src="logo/logo-blog.jpg" alt="" srcset=""
+        /></a>
+      </div>
+      <div class="desktop-menu-bar">
+        <a class="desktop-menu-bar-link" href="#">Home</a>
+        <a class="desktop-menu-bar-link" href="#">Blogs</a>
+        <a class="desktop-menu-bar-link" href="#">Category</a>
+        <a class="desktop-menu-bar-link" href="#">Contact</a>
+      </div>
+
       <div class="search-theme-profile">
         <div class="search-bar">
           <input type="search" placeholder="Search" name="" id="" />
@@ -53,10 +61,18 @@
           <input type="checkbox" />
           <span class="slider"></span>
         </label>
-        <a href="./login-reg-page/registration.html">Registration</a>
+        <a class="registration-button" href="./login-reg-page/registration.html"
+          >Registration</a
+        >
         <span class="profile-logo"><p>IB</p></span>
       </div>
     </section>
+    <div class="mobile-menu-bar">
+      <a class="mobile-menu-bar-link" href="./home.html">Home</a>
+      <a class="mobile-menu-bar-link" href="#">Blogs</a>
+      <a class="mobile-menu-bar-link" href="#">Category</a>
+      <a class="mobile-menu-bar-link" href="#">Contact</a>
+    </div>
     <section class="heroSection">
       <img src="./hero-banner/banner.jpg" alt="" />
       <div class="hero-card">
@@ -301,8 +317,10 @@
       <div class="footer-logo-section">
         <div class="footer-logo-section-content">
           <div class="footer-logo-tagline">
-            <div class="logo">
-              <img src="logo/logo-blog.jpg" alt="" srcset="" />
+            <div class="web-logo">
+              <a href="./home.html"
+                ><img src="logo/logo-blog.jpg" alt="" srcset=""
+              /></a>
             </div>
             <p>© JS Template 2023. All Rights Reserved.</p>
           </div>
