@@ -15,7 +15,7 @@ body {
 
 /* Navigation Bar */
 .web-logo {
-  width: 158px;
+  width: 70px;
   height: 36px;
 }
 
@@ -93,22 +93,22 @@ img {
 .mobile-menu-icon {
   width: 36px;
   height: 36px;
-  display: inline;
+  display: none;
   cursor: pointer;
 }
 
 .mobile-menu-bar {
   position: fixed;
   top: 70px;
-  left: 50px;
+  left: 24px;
   z-index: 1;
-  width: 200px;
+  width: 150px;
   display: none;
   overflow: hidden;
   flex-direction: column;
   align-items: center;
   background-color: var(--secondary-font-color);
-  opacity: 0.5;
+  opacity: 1;
   border-radius: 12px;
 }
 .mobile-menu-bar-link {
@@ -166,7 +166,8 @@ img {
 }
 
 /* Profile Logo */
-.profile-logo {
+.profile-icon {
+  cursor: pointer;
   height: 36px;
   width: 36px;
   display: flex;
@@ -177,6 +178,35 @@ img {
   p {
     font-weight: 700;
   }
+}
+
+.profile-bar {
+  position: fixed;
+  top: 70px;
+  right: 150px;
+  z-index: 1;
+  display: none;
+  flex-direction: column;
+  width: 150px;
+  overflow: hidden;
+  align-items: center;
+  background-color: var(--secondary-font-color);
+  opacity: 1;
+  border-radius: 12px;
+}
+
+.profile-bar-link {
+  padding: 10px 50px;
+  text-decoration: none;
+  color: white;
+}
+
+.profile-bar-link:hover {
+  background-color: var(--primary-color);
+}
+
+.profile-bar-registration-button {
+  display: none;
 }
 
 /* Footer Section */
@@ -326,4 +356,148 @@ img {
 
 .footer-logo-tagline > p {
   padding-left: 0;
+}
+
+/* For Mobile Screen (Responsive) */
+@media screen and (max-width: 767px) {
+  .navBar {
+    max-width: 90%;
+  }
+
+  .mobile-menu-icon {
+    display: inline-block;
+  }
+
+  .desktop-menu-bar {
+    display: none;
+  }
+
+  .search-bar {
+    display: none;
+  }
+
+  .web-logo {
+    width: 100px;
+    height: 25px;
+  }
+
+  .slider {
+    width: 45px;
+  }
+
+  .registration-button {
+    display: none;
+  }
+
+  .profile-bar {
+    position: fixed;
+    top: 70px;
+    right: 40px;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    width: 150px;
+    overflow: hidden;
+    align-items: center;
+    background-color: var(--secondary-font-color);
+    opacity: 1;
+    border-radius: 12px;
+  }
+
+  .profile-bar-link {
+    padding: 10px 50px;
+    text-decoration: none;
+    color: white;
+  }
+
+  .profile-bar-link:hover {
+    background-color: var(--primary-color);
+  }
+
+  .profile-bar-registration-button {
+    display: inline-block;
+    margin: 5px 0;
+    padding: 5px 10px;
+    color: black;
+    background-color: rgba(75, 107, 251, 0.5);
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .profile-bar-registration-button:hover {
+    background-color: rgba(75, 107, 251, 1);
+    color: white;
+  }
+
+  .footer {
+    margin-top: 60px;
+  }
+
+  .footer-nav {
+    max-width: 90%;
+    grid-template-columns: none;
+    grid-template-rows: auto;
+    row-gap: 30px;
+  }
+
+  .about-content {
+    margin-bottom: 10px;
+  }
+
+  .newsletter-card-tagline {
+    margin-bottom: 5px;
+  }
+
+  .footer-logo-section {
+    max-width: 90%;
+  }
+}
+
+/* For Tablet Screen (Responsive) */
+@media screen and (min-width: 768px) and (max-width: 1341px) {
+  .profile-bar {
+    position: fixed;
+    top: 70px;
+    right: 60px;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    width: 150px;
+    overflow: hidden;
+    align-items: center;
+    background-color: var(--secondary-font-color);
+    opacity: 1;
+    border-radius: 12px;
+  }
+
+  .profile-bar-link {
+    padding: 10px 50px;
+    text-decoration: none;
+    color: white;
+  }
+
+  .profile-bar-link:hover {
+    background-color: var(--primary-color);
+  }
+
+  .profile-bar-registration-button {
+    display: inline-block;
+    margin: 5px 0;
+    padding: 5px 10px;
+    color: black;
+    background-color: rgba(75, 107, 251, 0.5);
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .profile-bar-registration-button:hover {
+    background-color: rgba(75, 107, 251, 1);
+    color: white;
+  }
+}
+
+/* For Desktop Screen (Responsive) */
+@media screen and (min-width: 1024px) {
 }
