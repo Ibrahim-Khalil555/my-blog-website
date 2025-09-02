@@ -15,7 +15,7 @@ body {
 
 /* Navigation Bar */
 .web-logo {
-  width: 70px;
+  width: 110px;
   height: 36px;
 }
 
@@ -53,13 +53,14 @@ img {
 .desktop-menu-bar-link:hover {
   cursor: pointer;
   background-color: var(--primary-color);
-  border-radius: 10px;
+  border-radius: 4px;
   color: white;
 }
 
 .search-theme-profile {
   display: flex;
   align-items: center;
+  column-gap: 10px;
 }
 
 .search-bar {
@@ -89,6 +90,22 @@ img {
   cursor: pointer;
 }
 
+/* Register Button */
+.login-button {
+  margin: 0;
+  padding: 5px 10px;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-button:hover {
+  background-color: rgb(51 80 209);
+  color: white;
+}
+
 /* Mobile menu */
 .mobile-menu-icon {
   width: 36px;
@@ -100,24 +117,60 @@ img {
 .mobile-menu-bar {
   position: fixed;
   top: 70px;
-  left: 24px;
+  /* left: 24px; */
+  right: 5%;
   z-index: 1;
-  width: 150px;
+  width: 200px;
   display: none;
   overflow: hidden;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   background-color: var(--secondary-font-color);
   opacity: 1;
-  border-radius: 12px;
+  border-radius: 5px;
 }
+
 .mobile-menu-bar-link {
-  padding: 10px 80px;
+  padding: 10px 0 10px 5px;
   text-decoration: none;
   color: white;
 }
+
 .mobile-menu-bar-link:hover {
   background-color: var(--primary-color);
+}
+
+.mobile-menu-bar-search {
+  display: flex;
+  align-items: center;
+  width: 166px;
+  height: 36px;
+  background-color: rgba(244, 244, 245, 1);
+  border-radius: 5px;
+  /* align-self: center; */
+  margin: 10px 0 10px 5px;
+}
+
+.mobile-menu-bar-search > input {
+  width: 114px;
+  height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--primary-font-color);
+  margin: 8px 16px;
+  background-color: rgba(244, 244, 245, 1);
+  border: none;
+  outline: none;
+}
+
+.mobile-menu-bar-search > .search-icon {
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+}
+
+.mobile-menu-bar-login-button {
+  display: none;
 }
 
 /* Toggle switch */
@@ -126,7 +179,7 @@ img {
   display: inline-block;
   width: 48px;
   height: 28px;
-  margin-left: 5px;
+  /* margin-left: 5px; */
 }
 
 .toggle input {
@@ -175,15 +228,15 @@ img {
   align-items: center;
   border-radius: 50%;
   background-color: var(--primary-color);
-  p {
-    font-weight: 700;
-  }
+  font-weight: 700;
+  color: white;
 }
 
 .profile-bar {
   position: fixed;
   top: 70px;
-  right: 150px;
+  /* right: 150px; */
+  right: 10%;
   z-index: 1;
   display: none;
   flex-direction: column;
@@ -192,7 +245,8 @@ img {
   align-items: center;
   background-color: var(--secondary-font-color);
   opacity: 1;
-  border-radius: 12px;
+  /* border-radius: 12px; */
+  border-radius: 5px;
 }
 
 .profile-bar-link {
@@ -203,10 +257,6 @@ img {
 
 .profile-bar-link:hover {
   background-color: var(--primary-color);
-}
-
-.profile-bar-registration-button {
-  display: none;
 }
 
 /* Footer Section */
@@ -269,6 +319,7 @@ img {
   margin-bottom: 10px;
   padding: 0;
   text-decoration: none;
+  color: black;
   cursor: pointer;
 }
 
@@ -290,9 +341,6 @@ img {
   border-radius: 12px;
   text-align: center;
   padding: 32px;
-  p {
-    padding: 0 0 10px 0;
-  }
 }
 
 .newsletter-card-title {
@@ -301,6 +349,8 @@ img {
 
 .newsletter-card-tagline {
   margin-bottom: 30px;
+  padding: 0 0 10px 0;
+  margin: 0;
 }
 
 .newsletter-email-input {
@@ -356,6 +406,8 @@ img {
 
 .footer-logo-tagline > p {
   padding-left: 0;
+  margin: 0;
+  padding: 10px 0;
 }
 
 /* For Mobile Screen (Responsive) */
@@ -376,23 +428,19 @@ img {
     display: none;
   }
 
-  .web-logo {
-    width: 100px;
-    height: 25px;
-  }
-
   .slider {
     width: 45px;
   }
 
-  .registration-button {
+  .login-button {
     display: none;
   }
 
   .profile-bar {
     position: fixed;
     top: 70px;
-    right: 40px;
+    /* right: 40px; */
+    right: 5%;
     z-index: 1;
     display: none;
     flex-direction: column;
@@ -401,7 +449,8 @@ img {
     align-items: center;
     background-color: var(--secondary-font-color);
     opacity: 1;
-    border-radius: 12px;
+    /* border-radius: 12px; */
+    border-radius: 5px;
   }
 
   .profile-bar-link {
@@ -414,19 +463,20 @@ img {
     background-color: var(--primary-color);
   }
 
-  .profile-bar-registration-button {
+  .mobile-menu-bar-login-button {
     display: inline-block;
-    margin: 5px 0;
+    margin: 10px auto;
+    /* margin: 0; */
     padding: 5px 10px;
-    color: black;
-    background-color: rgba(75, 107, 251, 0.5);
-    border-radius: 10px;
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 4px;
     font-weight: 600;
     text-decoration: none;
   }
 
-  .profile-bar-registration-button:hover {
-    background-color: rgba(75, 107, 251, 1);
+  .mobile-menu-bar-login-button:hover {
+    background-color: rgb(51 80 209);
     color: white;
   }
 
@@ -456,10 +506,30 @@ img {
 
 /* For Tablet Screen (Responsive) */
 @media screen and (min-width: 768px) and (max-width: 1341px) {
+  .navBar {
+    max-width: 90%;
+  }
+
+  .search-bar {
+    display: none;
+  }
+
+  .login-button {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: inline-block;
+  }
+  .desktop-menu-bar {
+    display: none;
+  }
+
   .profile-bar {
     position: fixed;
     top: 70px;
-    right: 60px;
+    /* right: 60px; */
+    right: 5%;
     z-index: 1;
     display: none;
     flex-direction: column;
@@ -468,7 +538,8 @@ img {
     align-items: center;
     background-color: var(--secondary-font-color);
     opacity: 1;
-    border-radius: 12px;
+    /* border-radius: 12px; */
+    border-radius: 5px;
   }
 
   .profile-bar-link {
@@ -481,19 +552,20 @@ img {
     background-color: var(--primary-color);
   }
 
-  .profile-bar-registration-button {
+  .mobile-menu-bar-login-button {
     display: inline-block;
-    margin: 5px 0;
+    margin: 10px auto;
+    /* margin: 0; */
     padding: 5px 10px;
-    color: black;
-    background-color: rgba(75, 107, 251, 0.5);
-    border-radius: 10px;
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 4px;
     font-weight: 600;
     text-decoration: none;
   }
 
-  .profile-bar-registration-button:hover {
-    background-color: rgba(75, 107, 251, 1);
+  .mobile-menu-bar-login-button:hover {
+    background-color: rgb(51 80 209);
     color: white;
   }
 }
