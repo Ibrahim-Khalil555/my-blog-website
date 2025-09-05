@@ -1,25 +1,71 @@
-/* Show Menu-Bar in Mobile Version */
-const icon = document.querySelector(".mobile-menu-icon");
-const menu = document.querySelector(".mobile-menu-bar");
+document.addEventListener('DOMContentLoaded', () => {
+  const isLogedIn = JSON.parse(localStorage.getItem("isLogedIn"));
 
+  const hambargerIcon = document.getElementById("mobile-menu-icon");
+  const hambargerMenu = document.getElementById("mobile-menu-bar");
 
-icon.addEventListener("click", function() {
-  if (menu.style.display === "none") {
-    menu.style.display = "flex";
-  } else {
-    menu.style.display = "none";
+  const profileIcon = document.getElementById("profile-icon");
+  const profileBar = document.getElementById("profile-bar");
+  
+  const loginButtonDesktop = document.getElementById("desktop-login-button");
+  const loginButtonMobileTab = document.getElementById("mobile-tab-login-button");
+
+  const logoutButton = document.getElementById("logout-button");
+
+  function loginButtonForDesktop(removeValue, addValue) {
+    loginButtonDesktop.classList.remove(removeValue);
+    loginButtonDesktop.classList.add(addValue);
   }
+
+  function loginButtonForMobileTab(removeValue, addValueue) {
+    loginButtonMobileTab.classList.remove(removeValue);
+    loginButtonMobileTab.classList.add(addValueue);
+  }
+
+  /* Show Menu-Bar in Mobile and Tablet Version */
+  hambargerIcon.addEventListener("click", function() {
+    if (hambargerMenu.style.display === "none") {
+      hambargerMenu.style.display = "flex";
+    } else {
+      hambargerMenu.style.display = "none";
+    }
+  });
+  
+  /* Show Profile-Bar in All Version (Mobile, Tablet and Desktop) */
+  profileIcon.addEventListener("click", function() {
+    if (profileBar.style.display === "none") {
+      profileBar.style.display = "flex";
+    } else {
+      profileBar.style.display = "none";
+    }
+  });
+
+  /* Hide Login-Button After Successfully Log In */  
+  if(isLogedIn) {
+    loginButtonForDesktop("login-button", "display-none");
+    loginButtonForMobileTab("mobile-menu-bar-login-button", "display-none");
+
+    profileIcon.style.display = "flex";
+  }
+  
+  else {
+    loginButtonForDesktop("display-none", "login-button");
+    loginButtonForMobileTab("display-none", "mobile-menu-bar-login-button");
+
+    profileIcon.style.display = "none";
+    profileBar.style.display = "none";
+  }
+  
+  /* Logout Button */
+  logoutButton.addEventListener("click", function(){
+    profileIcon.style.display = "none";
+    profileBar.style.display = "none";
+    
+    loginButtonForDesktop("display-none", "login-button");
+    loginButtonForMobileTab("display-none", "mobile-menu-bar-login-button");
+    
+    localStorage.setItem("isLogedIn", JSON.stringify(false));
+  
+  });
 });
 
-/* Show Profile-Bar in All Version */
-const profile_icon = document.querySelector(".profile-icon");
-const profile_menu = document.querySelector(".profile-bar");
-
-
-profile_icon.addEventListener("click", function() {
-  if (profile_menu.style.display === "none") {
-    profile_menu.style.display = "flex";
-  } else {
-    profile_menu.style.display = "none";
-  }
-});

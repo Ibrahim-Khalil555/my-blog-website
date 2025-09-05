@@ -90,8 +90,9 @@ img {
   cursor: pointer;
 }
 
-/* Register Button */
+/* Login Button */
 .login-button {
+  display: inline-block;
   margin: 0;
   padding: 5px 10px;
   color: white;
@@ -171,6 +172,19 @@ img {
 
 .mobile-menu-bar-login-button {
   display: none;
+  margin: 10px auto;
+  /* margin: 0; */
+  padding: 5px 10px;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.mobile-menu-bar-login-button:hover {
+  background-color: rgb(51 80 209);
+  color: white;
 }
 
 /* Toggle switch */
@@ -219,7 +233,7 @@ img {
 }
 
 /* Profile Logo */
-.profile-icon {
+#profile-icon {
   cursor: pointer;
   height: 36px;
   width: 36px;
@@ -257,6 +271,24 @@ img {
 
 .profile-bar-link:hover {
   background-color: var(--primary-color);
+}
+
+#logout-button {
+  display: inline-block;
+  margin: 10px auto;
+  padding: 5px 10px;
+  color: white;
+  background-color: red;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+#logout-button:hover {
+  background-color: #cb0000;
+  color: white;
 }
 
 /* Footer Section */
@@ -453,7 +485,7 @@ img {
     border-radius: 5px;
   }
 
-  .profile-bar-link {
+  /* .profile-bar-link {
     padding: 10px 50px;
     text-decoration: none;
     color: white;
@@ -461,12 +493,15 @@ img {
 
   .profile-bar-link:hover {
     background-color: var(--primary-color);
-  }
+  } */
 
   .mobile-menu-bar-login-button {
     display: inline-block;
+  }
+
+  /* .mobile-menu-bar-login-button {
+    display: inline-block;
     margin: 10px auto;
-    /* margin: 0; */
     padding: 5px 10px;
     color: white;
     background-color: var(--primary-color);
@@ -478,7 +513,7 @@ img {
   .mobile-menu-bar-login-button:hover {
     background-color: rgb(51 80 209);
     color: white;
-  }
+  } */
 
   .footer {
     margin-top: 60px;
@@ -542,7 +577,7 @@ img {
     border-radius: 5px;
   }
 
-  .profile-bar-link {
+  /* .profile-bar-link {
     padding: 10px 50px;
     text-decoration: none;
     color: white;
@@ -550,12 +585,15 @@ img {
 
   .profile-bar-link:hover {
     background-color: var(--primary-color);
-  }
+  } */
 
   .mobile-menu-bar-login-button {
     display: inline-block;
+  }
+
+  /* .mobile-menu-bar-login-button {
+    display: inline-block;
     margin: 10px auto;
-    /* margin: 0; */
     padding: 5px 10px;
     color: white;
     background-color: var(--primary-color);
@@ -567,9 +605,10 @@ img {
   .mobile-menu-bar-login-button:hover {
     background-color: rgb(51 80 209);
     color: white;
-  }
+  } */
 }
 
-/* For Desktop Screen (Responsive) */
-@media screen and (min-width: 1024px) {
+/* Hidden Element */
+.display-none {
+  display: none;
 }

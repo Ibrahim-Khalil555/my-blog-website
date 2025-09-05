@@ -1,13 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  max-width: 1218px;
+  margin: 32px auto;
+}
+
+:root {
+  --primary-color: rgba(75, 107, 251, 1);
+  --secondary-color: rgba(75, 107, 251, 0.05);
+  --primary-font-color: rgba(59, 60, 74, 1);
+  --secondary-font-color: rgba(24, 26, 42, 1);
+}
+
 /* My Profile */
-.profile-detailes {
-  text-align: center;
+.profile-details {
+  display: flex;
+  justify-content: center;
   margin-top: 20px;
 }
 
-.profile-detailes-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
+.details-container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid var(--primary-font-color);
+  width: 400px;
+}
+
+.details-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .profile-image-upload {
@@ -24,17 +50,16 @@
   cursor: pointer;
 }
 
-.user-name,
+/* .user-name,
 .user-email,
 .old-password,
 .new-password,
 .confirm-password {
-  margin: 10px auto;
+  margin: 15px auto;
   width: 40%;
   height: 30px;
   border-radius: 30px;
   box-shadow: 0 0 2px 2px blue;
-  /* align-self: center; */
   display: flex;
   align-items: center;
   padding: 2px 10px;
@@ -46,9 +71,7 @@
 .new-password > input,
 .confirm-password > input {
   width: 100%;
-  /* border-radius: 10px; */
   box-sizing: border-box;
-  /* align-self: center; */
   border: none;
   outline: none;
 }
@@ -64,6 +87,45 @@
   border: none;
   border: 2px solid darkblue;
   cursor: pointer;
+} */
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #444;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #4a90e2;
+}
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary-color);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: rgb(51 80 209);
 }
 
 /* Create Post Button */
@@ -81,7 +143,6 @@
 
 .post-upload-button > a {
   text-decoration: none;
-
   color: white;
   font-size: 16px;
   font-weight: bold;

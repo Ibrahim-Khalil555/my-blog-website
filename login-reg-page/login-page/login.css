@@ -43,7 +43,8 @@ body {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  border: 1px solid var(--primary-font-color);
   width: 400px;
 }
 
@@ -77,12 +78,18 @@ input:focus {
   border-color: #4a90e2;
 }
 
+#login-message {
+  color: red;
+  font-size: 16px;
+}
+
 button {
   width: 100%;
   padding: 12px;
   border: none;
   border-radius: 8px;
-  background: #4a90e2;
+  /* background: #4a90e2; */
+  background: var(--primary-color);
   color: white;
   font-size: 16px;
   cursor: pointer;
@@ -90,7 +97,8 @@ button {
 }
 
 button:hover {
-  background: #357ab7;
+  /* background: #357ab7; */
+  background: rgb(51 80 209);
 }
 
 .have-account {
