@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="login.css" />
   </head>
   <body>
-    <!-- <div class="back-button">
-      <a href="/home.html">Go Home</a>
-    </div> -->
     <div class="login-form">
       <div class="form-container">
         <h2>Login</h2>
@@ -24,9 +21,11 @@
             <input type="password" id="password" required />
           </div>
 
-          <p id="login-message"></p>
+          <p id="login-error-message" class="login-message"></p>
 
-          <button id="loginButton" type="submit">Login</button>
+          <button id="loginButton" type="submit" class="button" disabled>
+            Login
+          </button>
         </form>
         <p>
           I don't have an account

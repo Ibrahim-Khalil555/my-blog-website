@@ -10,9 +10,14 @@ body {
 
 :root {
   --primary-color: rgba(75, 107, 251, 1);
+  --primary-hover-color: rgb(51 80 209);
   --secondary-color: rgba(75, 107, 251, 0.05);
   --primary-font-color: rgba(59, 60, 74, 1);
   --secondary-font-color: rgba(24, 26, 42, 1);
+  --border-color: rgba(232, 232, 234, 1);
+  --shadow-color: rgba(24, 26, 42, 0.12);
+  --red-button-hover: rgb(197 2 2);
+  --gray-bg-color: rgba(244, 244, 245, 1);
 }
 
 /* My Profile */
@@ -23,7 +28,7 @@ body {
 }
 
 .details-container {
-  background: #fff;
+  background: var(--gray-bg-color);
   padding: 25px;
   border-radius: 12px;
   border: 1px solid var(--primary-font-color);
@@ -33,7 +38,7 @@ body {
 .details-container h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: var(--secondary-font-color);
 }
 
 .profile-image-upload {
@@ -43,9 +48,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: lightgray;
+  background-color: var(--shadow-color);
   opacity: 0.5;
-  border: 1px solid gray;
+  border: 1px solid var(--secondary-font-color);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -97,21 +102,27 @@ label {
   display: block;
   margin-bottom: 6px;
   font-size: 14px;
-  color: #444;
+  color: var(--secondary-font-color);
 }
 
 input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   font-size: 14px;
   outline: none;
 }
 
 input:focus {
-  border-color: #4a90e2;
+  border-color: var(--primary-color);
 }
+
+.message {
+  color: green;
+  font-size: 16px;
+}
+
 button {
   width: 100%;
   padding: 12px;
@@ -125,20 +136,20 @@ button {
 }
 
 button:hover {
-  background: rgb(51 80 209);
+  background: var(--primary-hover-color);
 }
 
 /* Create Post Button */
 .post-upload-button {
   margin: 40px auto;
-  background-color: blue;
+  background-color: var(--primary-color);
   height: 40px;
   width: 210px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  border: 2px solid darkblue;
+  border: 2px solid var(--border-color);
 }
 
 .post-upload-button > a {
@@ -146,4 +157,9 @@ button:hover {
   color: white;
   font-size: 16px;
   font-weight: bold;
+}
+
+.post-upload-button:hover {
+  background-color: var(--primary-hover-color);
+  cursor: pointer;
 }

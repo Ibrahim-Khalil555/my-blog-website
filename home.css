@@ -3,6 +3,8 @@
   --secondary-color: rgba(75, 107, 251, 0.05);
   --primary-font-color: rgba(59, 60, 74, 1);
   --secondary-font-color: rgba(24, 26, 42, 1);
+  --border-color: rgba(232, 232, 234, 1);
+  --shadow-color: rgba(24, 26, 42, 0.12);
 }
 
 /* Universal CSS */
@@ -28,16 +30,6 @@
   padding: 10px;
 }
 
-/* Mobile Search Bar */
-.mobile-search-bar {
-  display: none;
-}
-
-/* Tablet Search Bar */
-.tab-search-bar {
-  display: none;
-}
-
 /* Hero Section */
 .heroSection {
   margin: 0 auto;
@@ -57,10 +49,10 @@
   top: 360px;
   left: 64px;
   background-color: white;
-  border: 1px solid rgba(232, 232, 234, 1);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 40px;
-  box-shadow: 0px 12px 24px -6px rgba(24, 26, 42, 0.12);
+  box-shadow: 0px 12px 24px -6px var(--shadow-color);
   box-sizing: border-box;
 }
 
@@ -117,7 +109,7 @@
 .card-grid > .card {
   padding: 16px;
   background-color: white;
-  border: 1px solid rgba(232, 232, 234, 1);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
 }
 
@@ -156,7 +148,7 @@
   height: 48px;
   margin: 32px auto auto auto;
   padding: 12px 20px;
-  border: 1px solid rgba(105, 106, 117, 0.3);
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   font-size: 16px;
   font-weight: 500;
@@ -189,28 +181,6 @@
     border-right-width: 0px;
     outline: none;
     border-left-width: 0px;
-  }
-
-  .mobile-search-button {
-    width: 80px;
-    height: 36px;
-    padding: 0 5px;
-    background-color: var(--primary-color);
-    color: rgb(82, 82, 91);
-    border-radius: 20px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    cursor: pointer;
-  }
-  .mobile-search-button-icon {
-    /* width: 30px;
-    height: 30px; */
-  }
-
-  .mobile-search-button-text {
-    font-size: 14px;
-    font-weight: 500;
   }
 
   .heroSection {
@@ -296,18 +266,6 @@
 
 /* For Tablet Screen (Responsive) */
 @media screen and (min-width: 768px) and (max-width: 1341px) {
-  /* .navBar {
-    max-width: 90%;
-  }
-
-  .registration-button {
-    display: none;
-  } */
-
-  /* .profile-icon {
-    margin-left: 5px;
-  } */
-
   .heroSection {
     max-width: 90%;
     height: 400px;
@@ -360,8 +318,4 @@
   .footer-logo-section {
     max-width: 90%;
   }
-}
-
-/* For Desktop Screen (Responsive) */
-@media screen and (min-width: 1342px) {
 }

@@ -1,4 +1,5 @@
-
+document.addEventListener('DOMContentLoaded', () => {
+    
 const regButton = document.getElementById("regButton");
 
 regButton.addEventListener("click", function(e){
@@ -45,4 +46,6 @@ regButton.addEventListener("click", function(e){
     }
     
     localStorage.setItem("userData", JSON.stringify(users));
+});
+
 });
