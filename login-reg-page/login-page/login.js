@@ -1,25 +1,49 @@
+document.addEventListener('DOMContentLoaded', () => {
+
+const email = document.getElementById("email");
+const password = document.getElementById("password");
 const loginButton = document.getElementById("loginButton");
+const loginErrorMessage = document.getElementById("login-error-message");
 
-loginButton.addEventListener("click", function() {
+    
+function checkFields() {
+  if ((email.value.trim() !== "") && (password.value.trim() !== "")) {
+    loginButton.disabled = false;
+  }
+  else {
+    loginButton.disabled = true;
+  }
 
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-    const confirmPassword = document.getElementById("confirm").value;
+  if ((email.value.trim() === "") || (password.value.trim() === "")) {
+  removeErrorMessage();
+  }
+}
 
-    if(password !== confirmPassword) {
-        alert("Password doesn't matched");
-        return;
-    }
+function removeErrorMessage() {
+  loginErrorMessage.innerHTML = "";
+}
 
-    const userData = JSON.parse(localStorage.getItem("userData"));
+email.addEventListener("input", checkFields);
+password.addEventListener("input", checkFields);
+    
+    
+loginButton.addEventListener("click", function(e) {
+        
+  e.preventDefault();
+        
+  const userData = JSON.parse(localStorage.getItem("userData"));  
+  const foundUser = userData.find(user => user.email === email.value.trim() && user.password === password.value.trim());
+           
+  if(foundUser) {
+    localStorage.setItem("isLogedIn", JSON.stringify(true));
+    localStorage.setItem("loggedInId", JSON.stringify(foundUser));
+    window.location.href = "../../home.html";
+  }
+  else {
+    loginErrorMessage.innerHTML = "Login failed. Try again!";
+  }
 
-    const foundUser = userData.find(user => user.email === email && user.password === password);
-        window.open("google.com");
+    
+});
 
-    if(foundUser) {
-        location.replace("google.com");
-    }
-
-    else
-        alert("Login failed");
 });

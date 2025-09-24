@@ -1,34 +1,23 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: "Work Sans", sans-serif;
   max-width: 1218px;
   margin: 32px auto;
 }
+
 :root {
   --primary-color: rgba(75, 107, 251, 1);
+  --primary-hover-color: rgb(51 80 209);
   --secondary-color: rgba(75, 107, 251, 0.05);
   --primary-font-color: rgba(59, 60, 74, 1);
   --secondary-font-color: rgba(24, 26, 42, 1);
-}
-
-/* Back Button */
-.back-button {
-  width: 100px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--primary-color);
-  border: 1px solid var(--primary-font-color);
-  border-radius: 12px;
-}
-.back-button > a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-weight: 500;
+  --border-color: rgba(232, 232, 234, 1);
+  --shadow-color: rgba(24, 26, 42, 0.12);
+  --red-button-hover: rgb(197 2 2);
+  --gray-bg-color: rgba(244, 244, 245, 1);
 }
 
 /* Login Form */
@@ -40,17 +29,17 @@ body {
 }
 
 .form-container {
-  background: #fff;
+  background: var(--gray-bg-color);
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--primary-font-color);
   width: 400px;
 }
 
 .form-container h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: var(--secondary-font-color);
 }
 
 .form-group {
@@ -61,20 +50,25 @@ label {
   display: block;
   margin-bottom: 6px;
   font-size: 14px;
-  color: #444;
+  color: var(--secondary-font-color);
 }
 
 input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   font-size: 14px;
   outline: none;
 }
 
 input:focus {
-  border-color: #4a90e2;
+  border-color: var(--primary-color);
+}
+
+#reg-message {
+  color: red;
+  font-size: 16px;
 }
 
 button {
@@ -82,7 +76,7 @@ button {
   padding: 12px;
   border: none;
   border-radius: 8px;
-  background: #4a90e2;
+  background: var(--primary-color);
   color: white;
   font-size: 16px;
   cursor: pointer;
@@ -90,10 +84,5 @@ button {
 }
 
 button:hover {
-  background: #357ab7;
+  background: var(--primary-hover-color);
 }
-
-/* .have-account {
-  display: block;
-  margin: 10px;
-} */
