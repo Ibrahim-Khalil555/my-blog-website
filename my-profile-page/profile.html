@@ -11,19 +11,21 @@
     <div class="profile-details">
       <div class="details-container">
         <h2>My Profile</h2>
-        <!-- <div class="profile-image-upload">
-          <span class="icon-inside-upload-profile-image"
-            ><img src="../icons/upload-profile-pic-icon.png" alt=""
-          /></span>
-        </div> -->
 
         <form>
-          <div class="profile-image-upload">
-            <span class="icon-inside-upload-profile-image"
+          <input
+            type="file"
+            id="fileInput"
+            class="fileInput"
+            accept="image/*"
+          />
+
+          <label for="fileInput" class="profile-image-upload">
+            <span class="icon-inside-upload-profile-image" id="uploadIcon"
               ><img src="../icons/upload-profile-pic-icon.png" alt=""
             /></span>
-          </div>
-
+            <img id="previewImage" class="preview-img" />
+          </label>
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" required />
@@ -48,31 +50,8 @@
 
           <button id="saveButton" type="submit">Save</button>
         </form>
-
-        <!-- <div class="user-name">
-          <input placeholder="Name" type="text" name="" id="" />
-        </div>
-        <div class="user-email">
-          <input placeholder="Email" type="email" name="" id="" />
-        </div>
-        <div class="old-password">
-          <input placeholder="Old Password" type="password" name="" id="" />
-        </div>
-        <div class="new-password">
-          <input placeholder="New Password" type="password" name="" id="" />
-        </div>
-        <div class="confirm-password">
-          <input placeholder="Confirm Password" type="password" name="" id="" />
-        </div>
-        <div class="save-button">
-          <button type="submit">Save</button>
-        </div> -->
       </div>
     </div>
-    <div class="post-upload-button">
-      <a href="#">Click Here to Create Post</a>
-    </div>
-
     <script src="profile.js"></script>
   </body>
 </html>

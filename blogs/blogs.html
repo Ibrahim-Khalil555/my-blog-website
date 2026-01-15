@@ -3,39 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Home Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="global.css" />
-    <link rel="stylesheet" href="home.css" />
+    <title>Blogs</title>
+    <link rel="stylesheet" href="../home.css" />
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="blogs.css" />
   </head>
   <body>
-    <section class="navBar">
-      <div class="web-logo">
-        <a href="./home.html"
-          ><img src="logo/logo-blog.jpg" alt="" srcset=""
-        /></a>
-      </div>
-      <div class="desktop-menu-bar">
-        <a id="desktop-menu-bar-link" class="desktop-menu-bar-link" href="#"
-          >Home</a
-        >
-        <a class="desktop-menu-bar-link" href="blogs/blogs.html">Blogs</a>
-        <a class="desktop-menu-bar-link" href="#">Category</a>
-        <a class="desktop-menu-bar-link" href="#">Contact</a>
-      </div>
+    <header>
+      <section class="navBar">
+        <div class="web-logo">
+          <a href="/home.html"
+            ><img src="../logo/logo-blog.jpg" alt="" srcset=""
+          /></a>
+        </div>
+        <div class="desktop-menu-bar">
+          <a class="desktop-menu-bar-link" href="../home.html">Home</a>
+          <a
+            id="desktop-menu-bar-link"
+            class="desktop-menu-bar-link"
+            href="blogs.html"
+            >Blogs</a
+          >
+          <a class="desktop-menu-bar-link" href="#">Category</a>
+          <a class="desktop-menu-bar-link" href="#">Contact</a>
+        </div>
 
-      <div class="search-theme-profile">
-        <label class="toggle">
-          <input type="checkbox" />
-          <span class="slider"></span>
-        </label>
-        <div class="search-bar">
-          <input type="search" placeholder="Search" name="" id="search-input" />
+        <div class="search-theme-profile">
+          <label class="toggle">
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
+          <div class="search-bar">
+            <input
+              type="search"
+              placeholder="Search"
+              name=""
+              id="search-input"
+            />
+            <span class="search-icon">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.90906 2C5.93814 2 4.98903 2.28791 4.18174 2.82733C3.37444 3.36674 2.74524 4.13343 2.37368 5.03045C2.00213 5.92746 1.90491 6.91451 2.09433 7.86677C2.28375 8.81904 2.75129 9.69375 3.43783 10.3803C4.12438 11.0668 4.99909 11.5344 5.95135 11.7238C6.90362 11.9132 7.89067 11.816 8.78768 11.4444C9.6847 11.0729 10.4514 10.4437 10.9908 9.63639C11.5302 8.8291 11.8181 7.87998 11.8181 6.90906C11.818 5.60712 11.3008 4.35853 10.3802 3.43792C9.45959 2.51731 8.211 2.00008 6.90906 2Z"
+                  stroke="#52525B"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M10.5715 10.5716L14 14"
+                  stroke="#52525B"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+          </div>
+
+          <div id="search-result" class="search-result display-none"></div>
+
+          <a
+            id="desktop-login-button"
+            class="login-button"
+            href="../login-reg-page/login-page/login.html"
+            >Login</a
+          >
+
+          <span id="profile-icon" class="profile-icon"
+            ><span id="profile-pic-alternative-text"></span>
+            <img id="profile-pic" class="profile-pic" alt="" />
+          </span>
+
+          <div id="mobile-menu-icon" class="mobile-menu-icon">
+            <img src="/icons/menu.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <div id="mobile-menu-bar" class="mobile-menu-bar display-none">
+        <a class="mobile-menu-bar-link" href="/home.html">Home</a>
+        <a class="mobile-menu-bar-link" href="#">Blogs</a>
+        <a class="mobile-menu-bar-link" href="#">Category</a>
+        <a class="mobile-menu-bar-link" href="#">Contact</a>
+        <div class="mobile-menu-bar-search">
+          <input type="search" placeholder="Search" name="" id="" />
           <span class="search-icon">
             <svg
               width="16"
@@ -60,94 +115,25 @@
             </svg>
           </span>
         </div>
-
-        <div id="search-result" class="search-result display-none"></div>
-
         <a
-          id="desktop-login-button"
-          class="login-button"
-          href="./login-reg-page/login-page/login.html"
+          id="mobile-tab-login-button"
+          class="mobile-menu-bar-login-button"
+          href="/login-reg-page/login-page/login.html"
           >Login</a
         >
-        <span id="profile-icon" class="profile-icon"
-          ><span id="profile-pic-alternative-text"></span>
-          <img id="profile-pic" class="profile-pic" alt="" />
-        </span>
-        <div id="mobile-menu-icon" class="mobile-menu-icon">
-          <img src="./icons/menu.png" alt="" />
-        </div>
       </div>
-    </section>
-    <div id="mobile-menu-bar" class="mobile-menu-bar display-none">
-      <a class="mobile-menu-bar-link" href="./home.html">Home</a>
-      <a class="mobile-menu-bar-link" href="blogs/blogs.html">Blogs</a>
-      <a class="mobile-menu-bar-link" href="#">Category</a>
-      <a class="mobile-menu-bar-link" href="#">Contact</a>
-      <div class="mobile-menu-bar-search">
-        <input
-          type="search"
-          placeholder="Search"
-          name=""
-          id="mobile-search-input"
-        />
-        <span class="search-icon">
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M6.90906 2C5.93814 2 4.98903 2.28791 4.18174 2.82733C3.37444 3.36674 2.74524 4.13343 2.37368 5.03045C2.00213 5.92746 1.90491 6.91451 2.09433 7.86677C2.28375 8.81904 2.75129 9.69375 3.43783 10.3803C4.12438 11.0668 4.99909 11.5344 5.95135 11.7238C6.90362 11.9132 7.89067 11.816 8.78768 11.4444C9.6847 11.0729 10.4514 10.4437 10.9908 9.63639C11.5302 8.8291 11.8181 7.87998 11.8181 6.90906C11.818 5.60712 11.3008 4.35853 10.3802 3.43792C9.45959 2.51731 8.211 2.00008 6.90906 2Z"
-              stroke="#52525B"
-              stroke-width="1.5"
-              stroke-miterlimit="10"
-            />
-            <path
-              d="M10.5715 10.5716L14 14"
-              stroke="#52525B"
-              stroke-width="1.5"
-              stroke-miterlimit="10"
-              stroke-linecap="round"
-            />
-          </svg>
-        </span>
+      <div id="profile-bar" class="profile-bar display-none">
+        <a class="profile-bar-link" href="/my-profile-page/profile.html"
+          >Profile</a
+        >
+        <a class="profile-bar-link" href="/create-post/create-post.html"
+          >Create post</a
+        >
+        <button id="logout-button" class="logout-button" type="submit">
+          LogOut
+        </button>
       </div>
-
-      <a
-        id="mobile-tab-login-button"
-        class="mobile-menu-bar-login-button"
-        href="./login-reg-page/login-page/login.html"
-        >Login</a
-      >
-    </div>
-
-    <div
-      id="mobile-search-result"
-      class="mobile-search-result display-none"
-    ></div>
-
-    <div id="profile-bar" class="profile-bar display-none">
-      <a class="profile-bar-link" href="./my-profile-page/profile.html"
-        >Profile</a
-      >
-      <a class="profile-bar-link" href="create-post/create-post.html"
-        >Create post</a
-      >
-      <button id="logout-button" class="logout-button" type="submit">
-        LogOut
-      </button>
-    </div>
-
-    <section class="heroSection">
-      <img class="hero-banner" src="./hero-banner/banner.jpg" alt="" />
-      <div id="hero-card" class="hero-card">
-        <span id="hero-card-category" class="hero-card-category"></span>
-        <span id="hero-card-title" class="hero-card-title"> </span>
-        <span id="hero-card-profile-container" class="card-profile"> </span>
-      </div>
-    </section>
+    </header>
     <section class="latestPost">
       <span class="latest-post-title">Latest Post</span>
       <div class="card-grid" id="card-grid"></div>
@@ -231,8 +217,8 @@
         <div class="footer-logo-section-content">
           <div class="footer-logo-tagline">
             <div class="web-logo">
-              <a href="./home.html"
-                ><img src="logo/logo-blog.jpg" alt="" srcset=""
+              <a href="../home.html"
+                ><img src="../logo/logo-blog.jpg" alt="" srcset=""
               /></a>
             </div>
             <p>© JS Template 2023. All Rights Reserved.</p>
@@ -245,10 +231,9 @@
         </div>
       </div>
     </section>
+    <script src="../components/nav.js"></script>
 
-    <script src="home.js"></script>
-    <script src="/components/nav.js"></script>
-    <script src="/components/card.js"></script>
-    <script src="/components/search.js"></script>
+    <script src="blogs.js"></script>
+    <script src="../components/search.js"></script>
   </body>
 </html>

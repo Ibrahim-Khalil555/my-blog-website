@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.6;
+}
+
+:root {
+  --primary-color: rgba(75, 107, 251, 1);
+  --secondary-color: rgba(75, 107, 251, 0.05);
+  --primary-font-color: rgba(59, 60, 74, 1);
+  --secondary-font-color: rgba(24, 26, 42, 1);
+  --border-color: rgba(232, 232, 234, 1);
+  --shadow-color: rgba(24, 26, 42, 0.12);
+}
+
+main {
+  width: 60%;
+  margin: 60px auto;
+  padding: 0;
+}
+
+.category {
+  display: inline-block;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.post-title {
+  margin: 0 0 15px 0;
+  font-size: 28px;
+  color: black;
+}
+
+.post-meta {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+}
+
+.author img,
+.card-profile-text {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.card-profile-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.user-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-font-color);
+  cursor: pointer;
+}
+
+.date {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--primary-font-color);
+}
+
+.featured-image {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 40px;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  object-fit: fill;
+}
+
+.post-content {
+  font-size: 16px;
+  color: black;
+}
+
+@media screen and (max-width: 767px) {
+  .category {
+    padding: 2px 5px;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .post-title {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .user-name {
+    font-size: 14px;
+  }
+
+  .date {
+    font-size: 12px;
+  }
+
+  .featured-image {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1341px) {
+  .post-title {
+    font-size: 25px;
+    line-height: 1.3;
+  }
+
+  .featured-image {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 30px;
+  }
+}

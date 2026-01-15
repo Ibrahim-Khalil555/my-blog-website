@@ -20,7 +20,6 @@ body {
   --gray-bg-color: rgba(244, 244, 245, 1);
 }
 
-/* Login Form */
 .login-form {
   margin-top: 50px;
   display: flex;

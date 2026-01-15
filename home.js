@@ -1,65 +1,38 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const isLogedIn = JSON.parse(localStorage.getItem("isLogedIn"));
+document.addEventListener("DOMContentLoaded", () => {
+  const posts = JSON.parse(localStorage.getItem("blogPosts"));
+  const mobileSearchInput = document.getElementById("mobile-search-input");
+  const mobileSearchResultBar = document.getElementById("mobile-search-result");
 
-  const hambargerIcon = document.getElementById("mobile-menu-icon");
-  const hambargerMenu = document.getElementById("mobile-menu-bar");
+  mobileSearchInput.addEventListener("input", () => {
+    if (mobileSearchInput.value !== "") {
+      mobileSearchResultBar.classList.remove("display-none");
+    } else if (mobileSearchInput.value === "") {
+      mobileSearchResultBar.classList.add("display-none");
+    }
 
-  const profileIcon = document.getElementById("profile-icon");
-  const profileBar = document.getElementById("profile-bar");
-  
-  const loginButtonDesktop = document.getElementById("desktop-login-button");
-  const loginButtonMobileTab = document.getElementById("mobile-tab-login-button");
+    mobileSearchResultBar.innerHTML = "";
 
-  const logoutButton = document.getElementById("logout-button");
+    const searchInputValue = mobileSearchInput.value.toLowerCase();
+    const filtered = posts.filter((post) => {
+      const title = String(post.title || "");
+      return title.toLowerCase().startsWith(searchInputValue);
+    });
 
-  function loginButtonForDesktop(removeValue, addValue) {
-    loginButtonDesktop.classList.remove(removeValue);
-    loginButtonDesktop.classList.add(addValue);
-  }
+    filtered.forEach((result) => {
+      const createTitle = document.createElement("p");
+      createTitle.textContent = result.title;
+      mobileSearchResultBar.appendChild(createTitle);
 
-  function loginButtonForMobileTab(removeValue, addValueue) {
-    loginButtonMobileTab.classList.remove(removeValue);
-    loginButtonMobileTab.classList.add(addValueue);
-  }
-
-  /* Show Menu-Bar in Mobile and Tablet Version */
-  hambargerIcon.addEventListener("click", function() {
-    hambargerMenu.classList.toggle("display-visible-flex");
-  });
-  
-  /* Show Profile-Bar in All Version (Mobile, Tablet and Desktop) */
-  profileIcon.addEventListener("click", function() {
-    profileBar.classList.toggle("display-visible-flex");
+      onTitleClick(createTitle, result.slug);
+    });
   });
 
-  /* Hide Login-Button After Successfully Log In */  
-  if(isLogedIn) {
-    loginButtonForDesktop("login-button", "display-none");
-    loginButtonForMobileTab("mobile-menu-bar-login-button", "display-none");
-
-    profileIcon.classList.add("profile-icon");
+  function onTitleClick(title, slug) {
+    title.addEventListener("click", () => {
+      window.location.href = `single-post/single-post.html?slug=${slug}`;
+    });
   }
-  
-  else {
-    loginButtonForDesktop("display-none", "login-button");
-    loginButtonForMobileTab("display-none", "mobile-menu-bar-login-button");
 
-    profileIcon.classList.remove("profile-icon");
-    profileIcon.classList.add("display-none");
-  }
-  
-  /* Logout Button */
-  logoutButton.addEventListener("click", function(){
-    profileIcon.classList.remove("profile-icon");
-    profileIcon.classList.add("display-none");
-    profileBar.classList.remove("display-visible-flex");
-    profileBar.classList.add("display-none");
-    
-    loginButtonForDesktop("display-none", "login-button");
-    loginButtonForMobileTab("display-none", "mobile-menu-bar-login-button");
-    
-    localStorage.setItem("isLogedIn", JSON.stringify(false));
-  
-  });
+  const desktopMenuBarButton = document.getElementById("desktop-menu-bar-link");
+  desktopMenuBarButton.classList.add("on-click-desktop-menu-bar-link");
 });
-
