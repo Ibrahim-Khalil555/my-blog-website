@@ -10,22 +10,22 @@
   --gray-bg-color: rgba(244, 244, 245, 1);
 }
 
-/* Hidden Element */
 .display-none {
   display: none;
 }
 
-/* Visible Element (flex)*/
 .display-visible-flex {
   display: flex;
 }
 
-/* Visible Element (inline-block)*/
+.display-visible-block {
+  display: block !important;
+}
+
 .display-visible-inline-block {
   display: inline-block;
 }
 
-/* Body */
 body {
   height: 100vh;
   max-width: 100%;
@@ -33,7 +33,6 @@ body {
   font-family: "Work Sans", sans-serif;
 }
 
-/* Navigation Bar */
 .web-logo {
   width: 110px;
   height: 36px;
@@ -53,7 +52,6 @@ img {
   align-items: center;
 }
 
-/* Desktop menu */
 .desktop-menu-bar {
   height: 24px;
   display: flex;
@@ -72,6 +70,12 @@ img {
 
 .desktop-menu-bar-link:hover {
   cursor: pointer;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  color: white;
+}
+
+.on-click-desktop-menu-bar-link {
   background-color: var(--primary-color);
   border-radius: 4px;
   color: white;
@@ -110,7 +114,33 @@ img {
   cursor: pointer;
 }
 
-/* Login Button */
+.search-result {
+  width: 166px;
+  position: fixed;
+  top: 70px;
+  right: 15%;
+  background-color: var(--secondary-font-color);
+  color: white;
+  border-radius: 5px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.search-result > p {
+  margin: 0;
+  padding: 8px 0;
+  padding-left: 2px;
+  width: 166px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.search-result > p:hover {
+  background-color: var(--primary-hover-color);
+  cursor: pointer;
+}
+
 .login-button {
   display: inline-block;
   margin: 0;
@@ -127,7 +157,6 @@ img {
   color: white;
 }
 
-/* Mobile menu */
 .mobile-menu-icon {
   width: 36px;
   height: 36px;
@@ -202,7 +231,6 @@ img {
   color: white;
 }
 
-/* Toggle switch */
 .toggle {
   position: relative;
   display: inline-block;
@@ -246,7 +274,6 @@ img {
   transform: translateX(20px);
 }
 
-/* Profile Logo */
 .profile-icon {
   cursor: pointer;
   height: 36px;
@@ -258,6 +285,14 @@ img {
   background-color: var(--primary-color);
   font-weight: 700;
   color: white;
+  overflow: hidden;
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
 }
 
 .profile-bar {
@@ -275,9 +310,12 @@ img {
 }
 
 .profile-bar-link {
-  padding: 10px 50px;
+  padding: 10px 0px;
   text-decoration: none;
   color: white;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
 }
 
 .profile-bar-link:hover {
@@ -302,7 +340,6 @@ img {
   color: white;
 }
 
-/* Footer Section */
 .footer {
   width: 100%;
   margin-top: 70px;
@@ -453,7 +490,6 @@ img {
   padding: 10px 0;
 }
 
-/* For Mobile Screen (Responsive) */
 @media screen and (max-width: 767px) {
   .navBar {
     max-width: 90%;
@@ -469,6 +505,34 @@ img {
 
   .search-bar {
     display: none;
+  }
+
+  .mobile-search-result {
+    position: fixed;
+    top: 274px;
+    right: 5%;
+    z-index: 1;
+    width: 200px;
+    overflow: hidden;
+    background-color: var(--secondary-font-color);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+  }
+
+  .mobile-search-result > p {
+    margin: 0;
+    padding: 8px 0;
+    padding-left: 2px;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .mobile-search-result > p:hover {
+    background-color: var(--primary-hover-color);
+    cursor: pointer;
   }
 
   .slider {
@@ -511,7 +575,6 @@ img {
   }
 }
 
-/* For Tablet Screen (Responsive) */
 @media screen and (min-width: 768px) and (max-width: 1341px) {
   .navBar {
     max-width: 90%;
@@ -519,6 +582,34 @@ img {
 
   .search-bar {
     display: none;
+  }
+
+  .mobile-search-result {
+    position: fixed;
+    top: 274px;
+    right: 5%;
+    z-index: 1;
+    width: 200px;
+    overflow: hidden;
+    background-color: var(--secondary-font-color);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+  }
+
+  .mobile-search-result > p {
+    margin: 0;
+    padding: 8px 0;
+    padding-left: 2px;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .mobile-search-result > p:hover {
+    background-color: var(--primary-hover-color);
+    cursor: pointer;
   }
 
   .login-button {

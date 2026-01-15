@@ -8,12 +8,10 @@ body {
   margin: 32px auto;
 }
 
-/* Hide Element */
 .display-none {
   display: none;
 }
 
-/* Display Visible */
 .display-visible {
   display: inline-block;
 }
@@ -31,7 +29,6 @@ body {
   --disabled-button-color: rgb(172 182 226);
 }
 
-/* Login Form */
 .login-form {
   margin-top: 50px;
   display: flex;

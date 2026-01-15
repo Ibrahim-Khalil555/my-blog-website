@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  margin: 20px;
+}
+
+:root {
+  --primary-color: rgba(75, 107, 251, 1);
+  --primary-hover-color: rgb(51 80 209);
+  --secondary-color: rgba(75, 107, 251, 0.05);
+  --primary-font-color: rgba(59, 60, 74, 1);
+  --secondary-font-color: rgba(24, 26, 42, 1);
+  --border-color: rgba(232, 232, 234, 1);
+  --shadow-color: rgba(24, 26, 42, 0.12);
+  --red-button-hover: rgb(197 2 2);
+  --gray-bg-color: rgba(244, 244, 245, 1);
+  --disabled-button-color: rgb(172 182 226);
+}
+
+.show {
+  display: block !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.text-color-green {
+  color: green;
+  text-align: center;
+}
+
+.text-color-red {
+  color: red;
+  text-align: center;
+}
+
+.slug-meassage {
+  color: red;
+  text-align: left;
+  font-size: 12px;
+  margin-top: 0px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.left-card {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 600px;
+}
+
+.left-card label {
+  margin: 10px 0 5px;
+}
+
+.left-card input,
+.left-card textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.left-card textarea {
+  height: 200px;
+  resize: vertical;
+}
+
+.save-post {
+  height: 40px;
+  width: 100px;
+  font-size: 16px;
+  text-align: center;
+  margin: 40px auto;
+  display: block;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  background: var(--primary-color);
+}
+
+.save-post:disabled {
+  background-color: var(--disabled-button-color);
+}
+
+.save-post:hover:not(:disabled) {
+  background: var(--primary-hover-color);
+}
+
+.se-resizing-bar {
+  display: none !important;
+}
+
+.sun-editor {
+  border-radius: 5px !important;
+  overflow-y: scroll;
+  height: 700px;
+}
+
+.se-wrapper,
+.se-wrapper-wysiwyg {
+  height: auto !important;
+}
+
+.se-toolbar {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 10 !important;
+}
+
+.category {
+  width: 150px;
+  height: 30px;
+}
+
+.upload-box {
+  width: 400px;
+  height: 400px;
+  background-color: #e0e0e0;
+  border: 2px dashed #999;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  overflow: hidden;
+  margin: 10px auto !important;
+}
+
+.upload-box:hover {
+  background-color: #d6d6d6;
+}
+
+.upload-text {
+  font-weight: bold;
+}
+
+.choose-file {
+  color: #ff6666;
+  text-decoration: underline;
+}
+
+#fileInput {
+  display: none;
+}
+
+.preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .left-card {
+    width: 100%;
+    height: 500px;
+  }
+
+  .upload-box {
+    width: 80%;
+    height: 200px;
+    margin: 0 auto !important;
+  }
+
+  .left-card input,
+  .left-card textarea {
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+
+  .left-card label {
+    font-size: 14px;
+  }
+
+  .sun-editor .se-btn {
+    width: 20px;
+    height: 20px;
+  }
+
+  .category {
+    width: 120px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .save-post {
+    height: 30px;
+    width: 80px;
+    font-size: 14px;
+    margin: 30px auto;
+  }
+
+  .uploadText {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1341px) {
+  .upload-box {
+    width: 80%;
+    height: 300px;
+  }
+
+  .left-card {
+    width: 80%;
+  }
+
+  .card {
+    padding: 30px;
+  }
+
+  .save-post {
+    height: 35px;
+    width: 90px;
+    margin: 30px auto;
+  }
+}

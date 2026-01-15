@@ -7,13 +7,6 @@
   --shadow-color: rgba(24, 26, 42, 0.12);
 }
 
-/* Universal CSS */
-.profile-pic {
-  height: 36px;
-  width: 36px;
-  border-radius: 28px;
-}
-
 .user-name {
   font-size: 16px;
   font-weight: 500;
@@ -30,18 +23,16 @@
   padding: 10px;
 }
 
-/* Hero Section */
 .heroSection {
   margin: 0 auto;
   height: 600px;
   max-width: 80%;
   position: relative;
-  img {
-    border-radius: 12px;
-  }
+}
+.hero-banner {
+  border-radius: 12px;
 }
 
-/* Hero Section>> Card */
 .hero-card {
   height: 304px;
   width: 598px;
@@ -54,6 +45,7 @@
   padding: 40px;
   box-shadow: 0px 12px 24px -6px var(--shadow-color);
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .hero-card-category {
@@ -74,19 +66,31 @@
   line-height: 40px;
   color: var(--secondary-font-color);
   margin-top: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .card-profile {
   display: flex;
   align-items: center;
 }
-.card-profile-pic {
+
+.card-profile-pic,
+.card-profile-text {
   height: 30px;
   width: 30px;
+  border-radius: 50%;
 }
 
-/* Latest Post section */
+.card-profile-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .latestPost {
   max-width: 80%;
   margin: 0 auto;
@@ -111,6 +115,7 @@
   background-color: white;
   border: 1px solid var(--border-color);
   border-radius: 12px;
+  cursor: pointer;
 }
 
 .card-grid > .card > img {
@@ -142,7 +147,7 @@
   color: var(--secondary-font-color);
 }
 
-.view-post-button {
+.view-all-post-button {
   display: block;
   width: 142px;
   height: 48px;
@@ -157,7 +162,6 @@
   cursor: pointer;
 }
 
-/* For Mobile Screen (Responsive) */
 @media screen and (max-width: 767px) {
   .mobile-search-bar {
     margin: 20px auto;
@@ -264,7 +268,6 @@
   }
 }
 
-/* For Tablet Screen (Responsive) */
 @media screen and (min-width: 768px) and (max-width: 1341px) {
   .heroSection {
     max-width: 90%;
@@ -288,6 +291,7 @@
   .hero-card-title {
     font-size: 25px;
     line-height: 30px;
+    margin-bottom: 10px;
   }
 
   .latestPost {
